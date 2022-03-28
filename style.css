@@ -1,0 +1,157 @@
+/**
+  Reset CSS
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #17181f;
+  font-family: sans-serif;
+}
+
+/**
+  Buttons
+*/
+.btn {
+  color: white;
+  background-color: rgba(255,255,255, 0.04);
+  border: 0;
+  border-radius: 5px;
+  padding: 0 20px;
+  height: 32px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.4s;
+}
+
+.btn:hover {
+  background-color: rgba(255,255,255, 0.08);
+}
+
+.btn.primary {
+  background-color: #e87cca;
+  color: #17181f
+}
+
+.btn.primary:hover {
+  background-color: #c556a6;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    height: 48px;
+  }
+}
+
+/**
+  Container
+*/
+.container {
+  max-width: 620px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+/**
+  Page
+*/
+.main-content {
+  margin-top: 32px;
+}
+
+/**
+  Header
+*/
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.main-header h1 {
+  font-size: 20px;
+  color: white;
+}
+
+/**
+  Section Add Todo
+*/
+.section-add-todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.section-add-todo input {
+  width: 100%;
+  margin-right: 12px;
+  height: 32px;
+  background-color: rgba(255,255,255, 0.04);
+  border: 1px solid rgba(255,255,255, 0.08);
+  border-radius: 5px;
+  padding-left: 8px;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .section-add-todo input {
+    height: 48px;
+  }
+}
+
+/**
+  Section Todos
+*/
+.section-active-todos header h2 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/**
+  List Todos
+*/
+.todo-list .todo-list-card {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: rgba(255,255,255, 0.04);
+  border: 2px solid rgba(255,255,255, 0.04);
+  border-radius: 5px;
+  padding: 0 20px;
+  height: 32px;
+  cursor: pointer;
+  font-weight: normal;
+  transition: background-color 0.4s;
+}
+
+.todo-list .todo-list-card:not(.todo-list .todo-list-card:last-child) {
+  margin-bottom: 16px;
+}
+
+.todo-list .todo-list-card:hover {
+  background-color: rgba(255,255,255, 0.08);
+}
+
+.todo-list .todo-list-card.completed {
+  text-decoration: line-through;
+  color: rgba(255,255,255, 0.6);
+  background-color: transparent;
+}
+
+@media (max-width: 480px) {
+  .todo-list .todo-list-card {
+    height: 48px;
+  }
+}
